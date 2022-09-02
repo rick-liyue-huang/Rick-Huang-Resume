@@ -1,0 +1,23 @@
+.container {
+  padding: 7rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  .imgContainer {
+    width: 80px;
+    height: 80px;
+    box-shadow: var(--box-shadow-1);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    font-size: 1.3rem;
+    color: var(--color-font);
+    text-align: center;
+  }
+}

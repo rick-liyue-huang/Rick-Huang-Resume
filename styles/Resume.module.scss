@@ -1,0 +1,144 @@
+.subtitle {
+  display: block;
+  color: var(--color-red-dark);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.subtitle2 {
+  display: block;
+  color: var(--color-red-dark);
+  margin-bottom: 1rem;
+  text-align: start;
+}
+
+.title {
+  color: var(--color-font);
+  font-size: 3.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.tabs {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: var(--box-shadow);
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+  button {
+    background: var(--color-bg-gradient);
+    height: 120px;
+    width: 100%;
+    font-size: 2.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--color-font);
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.tabActive {
+  color: var(--color-red-dark) !important;
+}
+
+.title2 {
+  color: var(--color-font);
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  text-align: start;
+}
+
+.rows {
+  display: flex;
+  gap: 2rem;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    gap: 0;
+  }
+  .cards {
+    padding-left: 1.4rem;
+    position: relative;
+    border-left: 5px solid #17191c;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    @media screen and (max-width: 1024px) {
+      padding-bottom: 2rem;
+    }
+  }
+  .card {
+    position: relative;
+    padding: 45px 40px;
+    border-radius: 6px;
+    background: var(--color-bg-gradient);
+    transition: all 250ms linear;
+    cursor: pointer;
+    &:hover {
+      background: var(--color-bg-gradient-dark);
+      &::before {
+        background: var(--color-red-dark);
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: -1.4rem;
+      width: 1.4rem;
+      height: 5px;
+      background: #17191c;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: 2;
+      top: 17%;
+      left: -2.2rem;
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 50%;
+      background: var(--color-bg);
+      border: 5.5px solid #17191c;
+      transition: background 200ms ease;
+    }
+    .info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+      .cardTitle {
+        h4 {
+          font-size: 1.4rem;
+          color: var(--color-font);
+        }
+        span {
+          font-size: 0.9rem;
+          text-align: start;
+          color: #7c838e;
+        }
+      }
+      .gradeContainer {
+        padding: 0.5rem;
+        background: var(--color-bg-gradient);
+        box-shadow: var(--box-shadow-1);
+        border-radius: 8px;
+        span {
+          color: var(--color-red-dark);
+          font-weight: 500;
+        }
+      }
+    }
+    .description {
+      font-size: 1.1rem;
+      color: #878e99;
+    }
+  }
+}
