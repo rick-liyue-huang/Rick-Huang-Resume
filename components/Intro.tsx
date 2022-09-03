@@ -103,6 +103,7 @@ const Intro: React.FC = () => {
               layout="responsive"
               objectFit="cover"
               alt=""
+              priority
             />
           </div>
         </div>

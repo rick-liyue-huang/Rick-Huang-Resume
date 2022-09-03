@@ -53,7 +53,7 @@ export const projectsData: ProjectType[] = [
     category: 'NextJS GraphQL',
     imageSource: '/reddit2.png',
     detail:
-      'Researching webpack5 and realize the different bundle status under directories, including build-base-conf, build-multi-page, build-splitChunks and so on, in the end simulating the react.js bundle tool to bundle one typescript demo project and deploy online',
+      'This application will clone Reddit again, in which using NextJS to create front-end pages, using supabase to manage backend PostgreSQL database, and using StepZen to create GraphQL middle layer to query database and then render the data in pages by Apollo/Client.',
     projectLink:
       'https://github.com/rick-liyue-huang/NextJS-GraphQL-Reddit-Webapp',
     onlineLink: 'https://nextjs-graphql-reddit-webapp.vercel.app',
