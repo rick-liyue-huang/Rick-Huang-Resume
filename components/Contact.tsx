@@ -66,10 +66,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        'service_zvhhrju',
-        'template_yl8u6qb',
+        process.env.NEXT_PUBLIC_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID as string,
         e.target,
-        'oI3SaS2opu2YdPXcn'
+        process.env.NEXT_PUBLIC_USER_ID as string
       )
       .then((result) => {
         setEmail('');
