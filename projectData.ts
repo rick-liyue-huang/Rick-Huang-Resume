@@ -1,0 +1,61 @@
+import { ProjectType } from './types';
+
+export const projectsData: ProjectType[] = [
+  {
+    description: 'Dig Webpack5',
+    category: 'Webpack',
+    imageSource: '/webpack.png',
+    detail:
+      'Researching webpack5 and realize the different bundle status under directories, including build-base-conf, build-multi-page, build-splitChunks and so on, in the end simulating the react.js bundle tool to bundle one typescript demo project and deploy online',
+    projectLink: 'https://github.com/rick-liyue-huang/Try-Webpack',
+    onlineLink: 'https://jovial-melomakarona-e7cb49.netlify.app',
+  },
+  {
+    description: 'Daily Task Management WebApp',
+    category: 'ReactJS MERN',
+    imageSource: '/task-mern.png',
+    detail:
+      'Using MERN to create one daily task management webapp, through which we can register or login to create task and add notes on each task',
+    projectLink: 'https://github.com/rick-liyue-huang/TaskList-Mern',
+    onlineLink: 'https://mernlistwebapp.herokuapp.com',
+  },
+  {
+    description: 'Firebase Based Reddit',
+    category: 'NextJS Firebase Stripe',
+    imageSource: '/reddit1.png',
+    detail:
+      'Using the Next.js and Firebase to clone the Reddit WebApp, in which we can login and register the new account and CRUD the community, post, comments and vote, the authorized user can also subscribe some plans by Stripe.',
+    projectLink: 'https://github.com/rick-liyue-huang/NextJS-Reddit-WebApp',
+    onlineLink: 'https://nextjs-reddit-webapp.vercel.app',
+  },
+  {
+    description: 'Axios Simulation',
+    category: 'Javascript',
+    imageSource: '/axios-simulation.png',
+    detail:
+      'In this project mainly I use original javascript language to simulate Axios.js framework',
+    projectLink: 'https://github.com/rick-liyue-huang/Axios-Simulation',
+    onlineLink:
+      'https://github.com/rick-liyue-huang/Axios-Simulation/blob/main/README.md',
+  },
+  {
+    description: 'Nextjs Firebase Twitter Webapp',
+    category: 'NextJS Firebase',
+    imageSource: '/twitter.png',
+    detail:
+      'This application will clone twitter, in which I create the front-end page by TypeScript NextJS, and store the data in Firebase. The whole project can be switched theme mode by tailwindcss lib and all the state are managed by recoil.js',
+    projectLink:
+      'https://github.com/rick-liyue-huang/Nextjs-Firebase-Twitter-Webapp',
+    onlineLink: 'https://nextjs-firebase-twitter-webapp.vercel.app',
+  },
+  {
+    description: 'NextJS GraphQL Reddit Webapp',
+    category: 'NextJS GraphQL',
+    imageSource: '/reddit2.png',
+    detail:
+      'Researching webpack5 and realize the different bundle status under directories, including build-base-conf, build-multi-page, build-splitChunks and so on, in the end simulating the react.js bundle tool to bundle one typescript demo project and deploy online',
+    projectLink:
+      'https://github.com/rick-liyue-huang/NextJS-GraphQL-Reddit-Webapp',
+    onlineLink: 'https://nextjs-graphql-reddit-webapp.vercel.app',
+  },
+];

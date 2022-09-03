@@ -1,3 +1,4 @@
+import { projectsData } from '../projectData';
 import styles from '../styles/Portofolio.module.scss';
 import PortofolioCard from './PortofolioCard';
 import Section from './Section';
@@ -13,12 +14,16 @@ const Portofolio: React.FC = () => {
 
       {/* ALL CARDS */}
       <div className={styles.cards}>
-        <PortofolioCard imageSource={'/portfolio-01.jpg'} />
-        <PortofolioCard imageSource={'/portfolio-02.jpg'} />
-        <PortofolioCard imageSource={'/portfolio-03.jpg'} />
-        <PortofolioCard imageSource={'/portfolio-04.jpg'} />
-        <PortofolioCard imageSource={'/portfolio-05.jpg'} />
-        <PortofolioCard imageSource={'/portfolio-06.jpg'} />
+        {projectsData.map((project) => (
+          <PortofolioCard
+            description={project.description}
+            category={project.category}
+            imageSource={project.imageSource}
+            detail={project.detail}
+            projectLink={project.projectLink}
+            onlineLink={project.onlineLink}
+          />
+        ))}
       </div>
     </Section>
   );

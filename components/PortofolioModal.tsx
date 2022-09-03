@@ -1,9 +1,21 @@
-import styles from '../styles/PortofolioModal.module.scss';
 import Image from 'next/image';
-import { FaTimes, FaThumbsUp, FaArrowRight } from 'react-icons/fa';
-import { useEffect, useRef, useCallback } from 'react';
+import Link from 'next/link';
+import { useCallback, useEffect, useRef } from 'react';
+import { FaArrowRight, FaTimes } from 'react-icons/fa';
 import useOnClickOutside from '../hooks/ClickOutside';
-const PortofolioModal = ({
+import styles from '../styles/PortofolioModal.module.scss';
+
+interface Props {
+  active: boolean;
+  setActive: (arg: boolean) => void;
+  feature: string;
+  title: string;
+  description: string;
+  projectLink: string;
+  imageSource: string;
+  onlineLink: string;
+}
+const PortofolioModal: React.FC<Props> = ({
   active,
   setActive,
   feature,
@@ -11,9 +23,10 @@ const PortofolioModal = ({
   description,
   projectLink,
   imageSource,
+  onlineLink,
 }) => {
-  const modal = useRef();
-  const escFunction = useCallback((event) => {
+  const modal = useRef<any>();
+  const escFunction = useCallback((event: any) => {
     if (event.key === 'Escape') {
       setActive(false);
     }
@@ -62,11 +75,15 @@ const PortofolioModal = ({
               <p className={styles.description}>{description}</p>
               <div className={styles.actions}>
                 <button>
-                  <span>Like This!</span>
-                  <FaThumbsUp />
+                  <Link href={`${onlineLink}`}>
+                    <span>Visit Project</span>
+                  </Link>
+                  <FaArrowRight />
                 </button>
                 <button>
-                  <span>View Project</span>
+                  <Link href={`${projectLink}`}>
+                    <span>View Project Structure</span>
+                  </Link>
                   <FaArrowRight />
                 </button>
               </div>
@@ -78,13 +95,13 @@ const PortofolioModal = ({
   );
 };
 
-PortofolioModal.defaultProps = {
-  feature: 'Feauture - Dev',
-  title: 'App Design Development.',
-  description:
-    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi. Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!',
-  projectLink: 'https://www.google.com',
-  imageSource: '/portfolio-02.jpg',
-};
+// PortofolioModal.defaultProps = {
+//   feature: 'Feauture - Dev',
+//   title: 'App Design Development.',
+//   description:
+//     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio assumenda explicabo veniam temporibus eligendi. Consectetur adipisicing elit. Cupiditate distinctio assumenda. dolorum alias suscipit rerum maiores aliquam earum odit, nihil culpa quas iusto hic minus!',
+//   projectLink: 'https://www.google.com',
+//   imageSource: '/portfolio-02.jpg',
+// };
 
 export default PortofolioModal;

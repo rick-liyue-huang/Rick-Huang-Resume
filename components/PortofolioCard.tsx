@@ -1,14 +1,31 @@
-import styles from '../styles/PortofolioCard.module.scss';
-import Image from 'next/image';
-import { FaHeart } from 'react-icons/fa';
-import { useState } from 'react';
-import PortofolioModal from './PortofolioModal';
 import { useAutoAnimate } from '@formkit/auto-animate/react';
+import Image from 'next/image';
+import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
+import styles from '../styles/PortofolioCard.module.scss';
+import PortofolioModal from './PortofolioModal';
 
-const PortofolioCard = ({ imageSource, category, likes, description }) => {
+interface Props {
+  imageSource: string;
+  category: string;
+  description: string;
+  // likes: number;
+  detail: string;
+  projectLink: string;
+  onlineLink: string;
+}
+
+const PortofolioCard: React.FC<Props> = ({
+  imageSource,
+  category,
+  // likes,
+  description,
+  detail,
+  projectLink,
+  onlineLink,
+}) => {
   const [active, setActive] = useState(false);
-  const [parent] = useAutoAnimate(/* optional config */);
+  const [parent] = useAutoAnimate<any>(/* optional config */);
   return (
     <div ref={parent}>
       {/* ANIMATION */}
@@ -29,10 +46,10 @@ const PortofolioCard = ({ imageSource, category, likes, description }) => {
           {/* INFORMATION */}
           <div className={styles.info}>
             <span className={styles.category}>{category}</span>
-            <div className={styles.likes}>
+            {/* <div className={styles.likes}>
               <FaHeart />
               <span>{likes}</span>
-            </div>
+            </div> */}
           </div>
           <h2>{description}</h2>
         </button>
@@ -45,17 +62,20 @@ const PortofolioCard = ({ imageSource, category, likes, description }) => {
           feature={category}
           imageSource={imageSource}
           title={description}
+          description={detail}
+          projectLink={projectLink}
+          onlineLink={onlineLink}
         />
       )}
     </div>
   );
 };
 
-PortofolioCard.defaultProps = {
-  imageSource: '/portfolio-01.jpg',
-  category: 'Development',
-  likes: 680,
-  description: 'Mobile App Page',
-};
+// PortofolioCard.defaultProps = {
+//   imageSource: '/portfolio-01.jpg',
+//   category: 'Development',
+//   likes: 680,
+//   description: 'Mobile App Page',
+// };
 
 export default PortofolioCard;
