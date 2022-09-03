@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import styles from '../styles/PortofolioCard.module.scss';
-import PortofolioModal from './PortofolioModal';
+import ProjectModal from './ProjectModal';
 
 interface Props {
   imageSource: string;
@@ -15,7 +15,7 @@ interface Props {
   onlineLink: string;
 }
 
-const PortofolioCard: React.FC<Props> = ({
+const ProjectCard: React.FC<Props> = ({
   imageSource,
   category,
   // likes,
@@ -56,7 +56,7 @@ const PortofolioCard: React.FC<Props> = ({
       </Fade>
       {/* MODAL */}
       {active && (
-        <PortofolioModal
+        <ProjectModal
           active={active}
           setActive={setActive}
           feature={category}
@@ -78,4 +78,4 @@ const PortofolioCard: React.FC<Props> = ({
 //   description: 'Mobile App Page',
 // };
 
-export default PortofolioCard;
+export default ProjectCard;

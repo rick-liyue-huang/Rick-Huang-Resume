@@ -15,7 +15,7 @@ interface Props {
   imageSource: string;
   onlineLink: string;
 }
-const PortofolioModal: React.FC<Props> = ({
+const ProjectModal: React.FC<Props> = ({
   active,
   setActive,
   feature,
@@ -104,4 +104,4 @@ const PortofolioModal: React.FC<Props> = ({
 //   imageSource: '/portfolio-02.jpg',
 // };
 
-export default PortofolioModal;
+export default ProjectModal;

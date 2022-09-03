@@ -5,7 +5,7 @@ import Features from '../components/Features';
 import Footer from '../components/Footer';
 import Intro from '../components/Intro';
 import Navbar from '../components/Navbar';
-import Portofolio from '../components/Portofolio';
+import Project from '../components/Project';
 import Resume from '../components/Resume';
 import ScrollToTop from '../components/ScrollToTop';
 
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       <main className="global">
         <Intro />
         <Resume />
-        <Portofolio />
+        <Project />
         <Features />
         {/* <Pricing /> */}
         <Contact />

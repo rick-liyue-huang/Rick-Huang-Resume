@@ -112,23 +112,18 @@ const Navbar = () => {
                 </Link>
               </li>
               <li onClick={() => setIsActive(false)}>
-                <Link href="#features">
-                  <a>Features</a>
-                </Link>
-              </li>
-              <li onClick={() => setIsActive(false)}>
-                <Link href="#portofolio">
-                  <a>Portofolio</a>
-                </Link>
-              </li>
-              <li onClick={() => setIsActive(false)}>
                 <Link href="#resume">
                   <a>Resume</a>
                 </Link>
               </li>
               <li onClick={() => setIsActive(false)}>
-                <Link href="#pricing">
-                  <a>Pricing</a>
+                <Link href="#projects">
+                  <a>Projects</a>
+                </Link>
+              </li>
+              <li onClick={() => setIsActive(false)}>
+                <Link href="#features">
+                  <a>Features</a>
                 </Link>
               </li>
               <li onClick={() => setIsActive(false)}>

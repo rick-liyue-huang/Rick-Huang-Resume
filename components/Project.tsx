@@ -1,9 +1,9 @@
 import { projectsData } from '../projectData';
 import styles from '../styles/Portofolio.module.scss';
-import PortofolioCard from './PortofolioCard';
+import PortofolioCard from './ProjectCard';
 import Section from './Section';
 
-const Portofolio: React.FC = () => {
+const Project: React.FC = () => {
   return (
     <Section id="projects" className={styles.portofolio}>
       {/* SUBTITLE */}
@@ -16,6 +16,7 @@ const Portofolio: React.FC = () => {
       <div className={styles.cards}>
         {projectsData.map((project) => (
           <PortofolioCard
+            key={project.description}
             description={project.description}
             category={project.category}
             imageSource={project.imageSource}
@@ -29,4 +30,4 @@ const Portofolio: React.FC = () => {
   );
 };
 
-export default Portofolio;
+export default Project;

@@ -1,3 +1,4 @@
+import emailjs from 'emailjs-com';
 import React, { ReactNode, useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import { z } from 'zod';
@@ -49,7 +50,8 @@ const Contact = () => {
   });
   const [errors, setErrors] = useState<any>([]);
   //validate schema
-  const validate = () => {
+  const validate = (e: any) => {
+    e.preventDefault();
     const result = schema.safeParse({
       name: name,
       phone: phone,
@@ -59,6 +61,27 @@ const Contact = () => {
     });
     // @ts-ignore
     setErrors(result?.error?.format());
+    // console.log(result);
+    // window.open('MailTo: rick.liyue.huang@gmail.com');
+
+    emailjs
+      .sendForm(
+        'service_zvhhrju',
+        'template_yl8u6qb',
+        e.target,
+        'oI3SaS2opu2YdPXcn'
+      )
+      .then((result) => {
+        setEmail('');
+        setName('');
+        setSubject('');
+        setPhone('');
+        setMessage('');
+        alert('sent successfully');
+      })
+      .catch((err) => {
+        // setErrors(err.message)
+      });
   };
 
   return (
@@ -133,7 +156,7 @@ const Contact = () => {
           </div> */}
         </div>
         {/* FORM */}
-        <form onSubmit={(e) => e.preventDefault()} className={styles.form}>
+        <form onSubmit={validate} className={styles.form}>
           {/* NAME */}
           <div className={styles.name}>
             <InputContainer
@@ -208,7 +231,7 @@ const Contact = () => {
             />
           </InputContainer>
 
-          <button onClick={() => validate()}>
+          <button type="submit">
             <span>SEND MESSAGE</span>
             <FaArrowRight />
           </button>
@@ -219,3 +242,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+// onClick={() => window.open('MailTo: rick.liyue.huang@gmail.com')}
