@@ -11,13 +11,14 @@ export const projectsData: ProjectType[] = [
     onlineLink: 'https://jovial-melomakarona-e7cb49.netlify.app',
   },
   {
-    description: 'Daily Task Management WebApp',
-    category: 'ReactJS MERN',
-    imageSource: '/task-mern.png',
+    description: 'NextJS Firebase Netflix WebApp',
+    category: 'NextJS MERN',
+    imageSource: '/netflix.png',
     detail:
-      'Using MERN to create one daily task management webapp, through which we can register or login to create task and add notes on each task',
-    projectLink: 'https://github.com/rick-liyue-huang/TaskList-Mern',
-    onlineLink: 'https://mernlistwebapp.herokuapp.com',
+      'Using NextJS to create one Netflix simulated webapp, through which we can subscript the plan and watch the movie trailer',
+    projectLink:
+      'https://github.com/rick-liyue-huang/NextJS-Firebase-Netflix-WebApp',
+    onlineLink: 'https://next-js-firebase-netflix-web-app.vercel.app',
   },
   {
     description: 'Firebase Based Reddit',
