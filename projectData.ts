@@ -40,14 +40,14 @@ export const projectsData: ProjectType[] = [
       'https://github.com/rick-liyue-huang/Axios-Simulation/blob/main/README.md',
   },
   {
-    description: 'Nextjs Firebase Twitter Webapp',
-    category: 'NextJS Firebase',
-    imageSource: '/twitter.png',
+    description: 'The Complete Auth System by NextJS',
+    category: 'NextJS Mysql TailwindCSS',
+    imageSource: '/auth-system.png',
     detail:
-      'This application will clone twitter, in which I create the front-end page by TypeScript NextJS, and store the data in Firebase. The whole project can be switched theme mode by tailwindcss lib and all the state are managed by recoil.js',
+      'This is a complete authentication system built with NextJS, Mysql, and TailwindCSS. It is a complete system with login, register, and logout functionality. It also has a setting page that is only accessible to logged in users. The setting page is a protected route that redirects to the login page if the user is not logged in. The auth system includes email and password login method and social method. The login user can change the password, 2 factor verification and account role.',
     projectLink:
-      'https://github.com/rick-liyue-huang/Nextjs-Firebase-Twitter-Webapp',
-    onlineLink: 'https://nextjs-firebase-twitter-webapp.vercel.app',
+      'https://github.com/rick-liyue-huang/The-Completed-NextJS-Auth-System',
+    onlineLink: 'https://the-completed-next-js-auth-system.vercel.app',
   },
   {
     description: 'NextJS GraphQL Reddit Webapp',
